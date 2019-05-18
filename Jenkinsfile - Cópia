@@ -1,6 +1,9 @@
 pipeline {
   agent {
-	docker { image 'ubuntu_jenkins' } 
+    node {
+      label 'master'
+    }
+    
   }
   stages {
     stage('Build') {
